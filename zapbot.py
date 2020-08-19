@@ -15,6 +15,7 @@ class ZapzapBot:
     self.driver = webdriver.Chrome(executable_path=r'./chromedriver.exe')
 
     self.avabot = AvaBot(self.driver, self.login, self.pwd)
+    
     self.mensagem = self.avabot.GetTeamsLink()
 
     self.WatchChatForCommandLink()
@@ -29,10 +30,12 @@ class ZapzapBot:
     goToGrupo.click()
 
     grupo = self.driver.find_element_by_xpath("//span[@title='Teste de bot']").find_element_by_xpath('../../../..')
+    
     while( True ):
       chat = grupo.find_elements_by_class_name('_3ko75')
       
       print('waiting for link command...')
+      
       if(chat[1].text == '!link'):
         self.EnviarMensagem()
 
@@ -41,7 +44,9 @@ class ZapzapBot:
   def EnviarMensagem(self):
     chatBox = self.driver.find_element_by_class_name("_3uMse")
     chatBox.click()
+    
     print(self.mensagem)
+    
     chatBox.send_keys(self.mensagem)
 
     buttonSend = self.driver.find_element_by_xpath("//span[@data-icon='send']")
