@@ -1,7 +1,7 @@
 # ZapBot Teams
 
 Crawler criado em python para automatizar a obtenção do link da video conferencia das aulas EAD no periodo da pandemia.
-Crawler feito para a turma de ADS 2 trimestre 2020 UNISAL, Campinas-SP.
+Crawler feito para a turma de ADS 2 semestre 2020 UNISAL, Campinas-SP.
 
 # Como usar
 
