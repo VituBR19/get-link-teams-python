@@ -26,10 +26,10 @@ class ZapzapBot:
 
     # ADS TURMA - GTADS1AN
 
-    goToGrupo = self.driver.find_element_by_xpath("//span[@title='Teste de bot']")
+    goToGrupo = self.driver.find_element_by_xpath("//span[@title='ADS TURMA - GTADS1AN']")
     goToGrupo.click()
 
-    grupo = self.driver.find_element_by_xpath("//span[@title='Teste de bot']").find_element_by_xpath('../../../..')
+    grupo = self.driver.find_element_by_xpath("//span[@title='ADS TURMA - GTADS1AN']").find_element_by_xpath('../../../..')
     
     while( True ):
       chat = grupo.find_elements_by_class_name('_3ko75')
